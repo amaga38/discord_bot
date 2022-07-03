@@ -1,0 +1,11 @@
+[Unit]
+Description=Discord Bot Server
+After=network-online.target
+
+[Service]
+ExecStart=python3 /opt/discord_bot/launcher.py
+WorkingDirectory=/opt/discord_bot
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
